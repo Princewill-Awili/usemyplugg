@@ -11,7 +11,8 @@ export  const services = [
      'Hair Stylist',
      'Generator Mechanic',
      'Electrician', 
-     'Gardener'
+     'Gardener',
+     'Driver'
 ]
 export const wordRandomizer = () => {
      return services[Math.floor(Math.random()* services.length)];

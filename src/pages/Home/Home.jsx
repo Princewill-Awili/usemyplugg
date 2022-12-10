@@ -1,11 +1,17 @@
 import { useState,useEffect } from 'react'
 import './home.css'
 import { wordRandomizer, services } from '../../utils/helperFuncs'
+import { artisanList } from '../../utils/dummyData'
+import Artisan from '../../components/Artisan/Artisan'
 
 const Home = () => {
 
 const [artisan, setArtisan] = useState(wordRandomizer());
-const [showResults,setShowResults] = useState(true);
+const [showResults,setShowResults] = useState(false);
+
+const handleResults = () => {
+     setShowResults(true);
+}
 
  useEffect(() => {
      const interval = setInterval(() => {
@@ -52,8 +58,25 @@ const [showResults,setShowResults] = useState(true);
                <option className='servOpt' value="asaba">Asaba</option>
           </select>
 
-          <div className="searchBtn">Search</div>
+          <div className="searchBtn" onClick={handleResults}>Search</div>
      </div>
+
+     {
+          showResults && (
+               <div className="resultsListWrapper">
+                    <p className="resNote">You have 1 result</p>
+                    <div className="resultsList">
+                         {
+                         artisanList.map((artisan,index) => (
+                              <Artisan key={index} {...artisan}/>
+                         ))
+                         }              
+                    </div>
+
+               </div>
+          )
+     }
+
      {!showResults && (<h4 className="vetted">Over 100+ industry-vetted service professionals</h4>)}
     
      <div className="cavaet">{showResults ? (<p className='miscInfo'>Can't find what you're looking for?<span className="boldtxt">Make a suggestion.</span></p>): "*Service professionals are rated by clients they've served."}</div>

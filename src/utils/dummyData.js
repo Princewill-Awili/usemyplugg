@@ -27,7 +27,9 @@ export const artisanB = {
      avatar:"",
      rating:3,
      area:"Agege, Lagos",
-     verified:true,
-     contact:"+2348038765342",
-     services:['Tecnician','Electrician']
+     verified:false,
+     contact:"+234803823442",
+     services:['Electrician']
 }
+
+export const artisanList = [artisanA,artisanB]

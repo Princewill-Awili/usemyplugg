@@ -129,6 +129,29 @@
      margin-left: 5px;
 }
 
+.resultsListWrapper{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     padding-top: 50px;
+}
+
+.resNote{
+     width: 100%;
+     display: flex;
+     font-size: 1.1rem;
+     font-weight: 600;
+     align-items: center;
+     border-bottom: 1px solid lightgrey;
+
+}
+.resultsList{
+     width: 100%;
+     display: flex;
+     flex-direction:column;
+     padding-top: 20px;
+}
+
 
 @media screen and (max-width:730px){
    .vetted{
