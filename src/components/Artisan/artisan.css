@@ -30,6 +30,10 @@
      font-weight: 600;
 }
 
+.aAdd{
+     margin: 0px 10px;
+}
+
 .serviceWrap{
      display: flex;
      width: fit-content;
@@ -72,4 +76,39 @@
      align-items: center;
      justify-content: center;
      margin: 0px 20px;
+}
+
+
+@media screen and (max-width:1080px) {
+     .serviceWrap{
+         display: none;
+     }
+     .verify{
+         width: 15%;
+     }
+    
+     
+}
+
+
+@media screen and (max-width:640px) {
+     .verify{
+          width: 20%;
+     }
+}
+
+
+@media screen and (max-width:400px) {
+     .aName,.aAdd{
+          font-size: 0.9rem;
+
+     }
+
+     .ratings{
+          display: none;
+     }
+
+     .verify{
+          width: 30%;
+     }
 }
