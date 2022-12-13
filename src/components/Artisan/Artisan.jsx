@@ -1,10 +1,22 @@
 import './artisan.css'
 import {FaUserAlt as UserIcon} from 'react-icons/fa'
 import {AiFillStar as StarFilled, AiOutlineStar as StarOutlined} from 'react-icons/ai'
+import { states } from '../../utils/context'
+import { useContext } from 'react'
+import { artisanList } from '../../utils/dummyData'
 
-const Artisan = ({name, avatar, rating,area,verified,services}) => {
+const Artisan = ({name, avatar, rating,area,verified,services, id}) => {
+
+     const {setPickedArtisan} = useContext(states);
+
+     const pickArtisan = (e) => {
+          const foundArtisan = artisanList.find(artisan => artisan.id === e.target.id);
+          setPickedArtisan(foundArtisan);
+          console.log(foundArtisan);
+     }
+
   return (
-    <div className='artisanComp'>
+    <div className='artisanComp' id={id} onClick={(e)=> pickArtisan(e)}>
           {avatar === "" ? <UserIcon className='userIcon'/> : <img className='avatarImg' src={avatar} alt="avatar"/> }
           <p className="aName">{name}</p>
           <div className="serviceWrap">

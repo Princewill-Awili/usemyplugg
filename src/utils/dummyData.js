@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid"
 export const artisans = {
      lagos:{
           carpenters:[
@@ -19,7 +20,8 @@ export const artisanA = {
      area:"Ajah, Lagos",
      verified:true,
      contact:"+2348038765342",
-     services:['Car Mechanic','Tecnician']
+     services:['Car Mechanic','Tecnician'],
+     id: nanoid()
 }
 
 export const artisanB = {
@@ -29,7 +31,8 @@ export const artisanB = {
      area:"Agege, Lagos",
      verified:false,
      contact:"+234803823442",
-     services:['Electrician']
+     services:['Electrician'],
+     id:nanoid()
 }
 
 export const artisanList = [artisanA,artisanB]

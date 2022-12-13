@@ -1,13 +1,16 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect, useContext } from 'react'
 import './home.css'
 import { wordRandomizer, services } from '../../utils/helperFuncs'
 import { artisanList } from '../../utils/dummyData'
 import Artisan from '../../components/Artisan/Artisan'
+import ArtisanFull from '../../components/ArtisanFull/ArtisanFull'
+import { states } from '../../utils/context'
 
 const Home = () => {
 
 const [artisan, setArtisan] = useState(wordRandomizer());
 const [showResults,setShowResults] = useState(false);
+const {pickedArtisan, setPickedArtisan} = useContext(states);
 
 const handleResults = () => {
      setShowResults(true);
@@ -22,6 +25,7 @@ const handleResults = () => {
 
   return (
     <div className='home'>
+     {pickedArtisan && (<ArtisanFull/>)}
      <h2 className="logoTxt">
           <span className="faded">use</span>
           myplugg
