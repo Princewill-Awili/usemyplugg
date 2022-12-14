@@ -11,7 +11,7 @@ const Home = () => {
 
 const [artisan, setArtisan] = useState(wordRandomizer());
 const [showResults,setShowResults] = useState(false);
-const {pickedArtisan, setPickedArtisan} = useContext(states);
+const {pickedArtisan} = useContext(states);
 
 const handleResults = () => {
      setShowResults(true);

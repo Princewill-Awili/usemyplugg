@@ -4,7 +4,6 @@ import { useContext } from 'react'
 import {IoCloseCircle as CloseIcon} from 'react-icons/io5'
 
 import {FaUserAlt as UserIcon} from 'react-icons/fa'
-import {AiFillStar as StarFilled, AiOutlineStar as StarOutlined} from 'react-icons/ai'
 import {MdVerified as VBadge} from 'react-icons/md'
 import {RiQuestionFill as UBadge} from 'react-icons/ri'
 
