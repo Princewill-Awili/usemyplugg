@@ -20,6 +20,7 @@ export const artisanA = {
      area:"Ajah, Lagos",
      verified:true,
      contact:"+2348038765342",
+     summary:"A hardworking,intelligent and motivated mechanic with experience working on Japanese and German cars such as Toyota, Nissan, Honda, Mercedes Benz and Kia.",
      services:['Car Mechanic','Tecnician'],
      id: nanoid()
 }
@@ -30,6 +31,7 @@ export const artisanB = {
      rating:3,
      area:"Agege, Lagos",
      verified:false,
+     summary:"A hardworking,intelligent and motivated mechanic with experience working on Japanese and German cars such as Toyota, Nissan, Honda, Mercedes Benz and Kia.",
      contact:"+234803823442",
      services:['Electrician'],
      id:nanoid()
