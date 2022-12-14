@@ -31,9 +31,8 @@ const ArtisanFull = () => {
                     </>
                )}
           <p className="basicInfo">
-               <span className="veri">{pickedArtisan.verified ?"Verified" : "Unverified"}</span>
                <span className="aService">{pickedArtisan.services[0]}</span>
-               <span className="area">{pickedArtisan.area}</span>
+               <span className="area"> at {pickedArtisan.area}</span>
           </p>
           <div className="servicesWrapper">
                <span className="servTitle">Services</span>

@@ -37,4 +37,18 @@ export const artisanB = {
      id:nanoid()
 }
 
-export const artisanList = [artisanA,artisanB]
+const artisanC = {
+     name:"Yinka",
+     avatar:"https://www.shutterstock.com/image-photo/portrait-real-black-african-man-260nw-504816958.jpg",
+     rating:5,
+     area:"Surlere, Lagos",
+     verified:true,
+     summary:"An experienced tailor and fashion designer skilled at making men and women's dresses, gowns, suits and tradintional attires.",
+     contact:"+234803823442",
+     services:['Fashion Designer', 'Tailor', 'Fabrics'],
+     id:nanoid()
+}
+
+
+
+export const artisanList = [artisanA,artisanB,artisanC]
