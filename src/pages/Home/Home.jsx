@@ -5,6 +5,7 @@ import { artisanList } from '../../utils/dummyData'
 import Artisan from '../../components/Artisan/Artisan'
 import ArtisanFull from '../../components/ArtisanFull/ArtisanFull'
 import { states } from '../../utils/context'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -26,11 +27,15 @@ const handleResults = () => {
   return (
     <div className='home'>
      {pickedArtisan && (<ArtisanFull/>)}
-     <h2 className="logoTxt">
-          <span className="faded">use</span>
-          myplugg
-          <span className="faded">.com</span>
-     </h2>
+     
+     <Link to="/">
+          <h2 className="logoTxt">
+               <span className="faded">use</span>
+               myplugg
+               <span className="faded">.com</span>
+          </h2>
+     </Link>
+     
      {!showResults && (
           <>
                <h1 className='largeFont'>

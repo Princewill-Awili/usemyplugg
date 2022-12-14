@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { StateContextProvider } from './utils/context';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StateContextProvider>
-    <App />
-  </StateContextProvider>
+  <Router>
+    <StateContextProvider>
+      <App />
+    </StateContextProvider>
+  </Router>
 );
 
 

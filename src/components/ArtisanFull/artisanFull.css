@@ -76,3 +76,15 @@
      width: 100%;
      gap: 10px;
 }
+
+.vBadge, .uBadge{
+     font-size: 2rem;
+}
+
+.vBadge{
+     color: green;
+}
+
+.uBadge{
+     color: red;
+}

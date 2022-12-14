@@ -17,18 +17,18 @@ const Artisan = ({name, avatar, rating,area,verified,services, id}) => {
 
   return (
     <div className='artisanComp' id={id} onClick={(e)=> pickArtisan(e)}>
-          {avatar === "" ? <UserIcon className='userIcon'/> : <img className='avatarImg' src={avatar} alt="avatar"/> }
-          <p className="aName">{name}</p>
-          <div className="serviceWrap">
+          {avatar === "" ? <UserIcon className='userIcon'/> : <img className='avatarImg' src={avatar} alt="avatar" id={id} onClick={(e)=> pickArtisan(e)}/> }
+          <p className="aName" id={id} onClick={(e)=> pickArtisan(e)}>{name}</p>
+          <div className="serviceWrap" id={id} onClick={(e)=> pickArtisan(e)}>
                {
                     services.map((service,index)=>(
                          <div className="serviceBubble" key={index}>{service}</div>
                     ))
                }
           </div>
-          <p className="aAdd">{area}</p>
+          <p className="aAdd" id={id} onClick={(e)=> pickArtisan(e)}>{area}</p>
 
-          <div className="ratings">
+          <div className="ratings" id={id} onClick={(e)=> pickArtisan(e)}>
               {
                 [...Array(rating)].map((star,index) =>(
                     <StarFilled key={index} className='starFill'/>
